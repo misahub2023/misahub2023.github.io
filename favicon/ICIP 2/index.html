@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Auto-WCEBleedGen Challenge Version V2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="icon" type="image/x-icon" href="../favicon/fav.ico">
+  </head>
+  <body>
+    <nav>
+      <input type="checkbox" id="check">
+      <label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>
+      </label>
+      <label class="logo">
+        <a href="https://misahub.in/index-boxes.html">
+            <img class = "logo"  width="120px" height="55px" style = "margin-top: 10px;" src = "assets/misaHub.png">
+        </a>
+     </label>
+      <ul>
+        <li class="nav-link"><a href="#overview">Overview</a></li>
+        <li class="nav-link"><a href="#challenge">Challenge</a></li>
+        <li class="nav-link"><a href="#dates">Dates</a></li>
+        <li class="nav-link"><a href="#register">Registration</a></li>
+        <li class="nav-link"><a href="#prize">Prizes</a></li>
+        <li class="nav-link"><a href="#team">Organisers</a></li>
+        <li class="nav-link"><a href="#contact">Contact</a></li>
+        <li class="nav-link"><a href="https://linktr.ee/icip2024" class="navBtn">Key Links</a></li>
+      </ul>
+    </nav>
+    <div class="main">
+        <div class="photo">
+            <h1>
+                Auto-WCEBleedGen Challenge Version V2
+            </h1>
+            <h3>
+                Automatic Classification between Bleeding and Non-Bleeding frames and further Detection and Segmentation of the Bleeding Region
+
+            </h3>
+        </div>
+
+        <div class="update">
+            <h2>IMPORTANT UPDATES</h2>
+            <ul class="list">
+                <li>&bull; Training dataset has been released. Check <span>KEY LINKS</span>.</li>
+                <li>&bull; Registrations are now <span>OPEN</span>. <span>HURRY, APPLY!</span></li>
+                <li>&bull; We sincerely acknowledge and thank 31<sup>st</sup> 2024 IEEE International Conference on Image Processing (IEEE ICIP 2024) for the amazing opportunity. Heartfelt gratitude for their support and guidance in conducting this challenge!</li>
+            </ul>         
+        </div>
+
+        <div id="overview" class="overview heading">
+            <h2>OVERVIEW</h2>
+            <p>
+                Gastrointestinal (GI) bleeding is a medical condition characterized by bleeding in the GI tract, which circumscribes oesophagus, stomach, small intestine, large intestine (colon), rectum, and anus. Since blood flows into the GI tract, a cascade of risks emerges, ranging from immediate dangers to potential long-term consequences. Excessive blood loss from GI bleeding may lead to a drop in blood pressure, reduced oxygen delivery to organs and tissues, and potentially life-threatening organ dysfunction.  
+                <br>
+                According to World Health Organization (WHO), GI bleeding is responsible for approximately 300,000 deaths every year globally. These statistics serve as a catalyst for research, propelling innovative treatment modalities and diagnostic advancements aimed at mitigating the dangers posed by GI bleeding. In last decade, the availability of advanced diagnostic innovations like Wireless Capsule Endoscopy (WCE) has led to better understanding of the GI bleeding in GI tract. The disposable capsule-shaped device travels inside the GI tract via peristalsis and comprises of an optical dome, a battery, an illuminator, an imaging sensor, and a radio-frequency transmitter. During 8-12 hours of WCE procedure, a video of the GI tract trajectory is recorded on a device attached to the patient’s belt which produces about 57,000-1,00,000 frames; analysed posterior by experienced gastroenterologists. 
+                <br>
+                Presently, an experienced gastroenterologist takes approximately 2−3 hours to inspect the captured video of one-patient through a frame-by-frame analysis which is not only time-consuming but also susceptible to human error. In view of the poor ratio of patient-to-doctor across globe, there arises a need for investigation and state-of-the-art development of robust, interpretable and generalized Artificial Intelligence (AI) models. This will aid in reducing the burden on gastroenterologists and save their valuable time by computer-aided classification between bleeding and non-bleeding frames and further detection and segmentation of bleeding region in that frame. 
+                <br>
+                Auto-WCEBleedGen Challenge Version V1 was a huge success with +1200 participation across globe. It was organized virtually by MISAHUB (Medical Imaging and Signal Analysis Hub), in collaboration with the 8th International Conference on CVIP (Computer Vision and Image Processing 2023), IIT Jammu, India from August 15 – October 14, 2023. It focused on automatic detection and classification of bleeding and non-bleeding frames in WCE. 
+                <br>
+                Following its success, we bring to you, Auto-WCEBleedGen Challenge Version V2 which focuses on automatic classification of bleeding and non-bleeding frames and further detection and segmentation of bleeding region in that frame. We have updated the annotations of the multiple bleeding sites present in the training dataset (WCEBleedGen). We have also updated the annotations and class labels of the testing dataset (Auto-WCEBleedGen Test) and provided un-marked images of dataset 1. 
+
+            </p>
+        </div>
+
+        <div id = "challenge" class="challenge heading">
+            <h2>CHALLENGE</h2>
+            <p>
+                <ul class="list">
+                    <li>&bull; 
+                        The aim of the Auto-WCEBleedGen Challenge Version V2 is to provide an opportunity for the development, testing and evaluation of AI models for automatic classification of bleeding and non-bleeding frames and further detection and segmentation of bleeding region in that frame. 
+                    </li>
+                    <li>&bull;
+                       The challenge consists of distinct training and test datasets and promotes the development of vendor-independent, interpretable, and generalized AI models.
+                    </li>
+                    <li>&bull;
+                        The training dataset consists of 2618 bleeding and non-bleeding WCE frames collected from multiple internet resources, and datasets with a vast variety and types of GI bleeding throughout the GI tract along with medically validated binary masks and bounding boxes in three formats (txt, XML and YOLO txt). The test dataset is an independently collected WCE data containing 564 bleeding and non-bleeding frames of 30 patients suffering from acute, chronic and occult GI bleeding referred at Department of Gastroenterology and HNU, All India Institute of Medical Sciences, New Delhi, India. 
+                    </li>
+                </ul>
+
+            </p>
+        </div>
+
+        <div id="dates" class="dates heading">
+            <h2>IMPORTANT DATES</h2>
+            <table>
+                <th style="width: 70%;">
+                    Events
+                </th>
+                <th>
+                    Dates
+                </th>
+                <tr>
+                    <td>Launch of the challenge</td>
+                    <td>January 20, 2024</td>
+                </tr> 
+                <tr>
+                    <td>E-Registration</td>
+                    <td>January 20 – January 30, 2024</td>
+                </tr>
+                <tr>
+                    <td>Release of Training Dataset</td>
+                    <td>January 20, 2024</td>
+                </tr>
+                <tr>
+                    <td>Release of Testing Dataset</td>
+                    <td>January 31, 2024
+                    </td>
+                </tr>
+                <tr>
+                    <td>Result submission</td>
+                    <td>February 22 – February 24, 2024</td>
+                </tr>
+                <tr>
+                    <td>Announcement of top three winning teams</td>
+                    <td>March 06, 2024</td>
+                </tr>
+                <tr>
+                    <td>Top three winning teams Challenge Paper Submission (optional)</td>
+                    <td>March 27, 2024
+                    </td>
+                </tr>
+                <tr>
+                    <td>Presentation by the winning team (1st position only) – ICIP 2024 
+                    </td>
+                    <td>October 27 – October 30, 2024
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div id="register" class="rules heading">
+            <h2>Registration and Rules</h2>
+            <p class="header">
+                Rules for Participation:
+            </p>
+            <ul class="list">
+                <li>&bull; This challenge will be open to all students (B. Tech/ M. Tech/ Ph.D. of all branches), and professionals across globe for free.</li>
+                <li>&bull; Participants will either register as a solo participant or can form a team.</li>
+                <li>&bull; The results will be submitted in a specific format over email to <a href="mailto:misahub2023@gmail.com">misahub2023@gmail.com</a>.</li>
+                <li>&bull; In the case of ties, the organizing committee may rank teams based on the method's novelty and readability of codes. The organizing committee's decision in this regard will be final.</li>
+                <li>&bull; Paper submission in the main conference (ICIP 2024) is highly encouraged.</li>
+            </ul>
+            <p class="header">
+                Rules for Team Formation:
+            </p>
+            <ul class="list">
+                <li>&bull; 
+                    A team can have a maximum of 4 participants.
+                </li>
+                <li>&bull;
+                    Team members can be from same or different organizations/affiliations.
+                </li>
+                <li>&bull; 
+                    A participant can only be a part of a single team.
+                </li>
+                <li>&bull; 
+                    Only one member from the team has to register for the challenge.
+                </li>
+                <li>&bull; 
+                    One team can only have one registration. Multiple registrations can lead to disqualification.
+                </li>
+                <li>&bull; 
+                    There is no limitations on the number of teams from the same organizations/affiliations. (However, one participant can only be part of a unique team.)
+                </li>
+            </ul>
+            <p class="header">
+                Rules for use of Training Dataset:
+            </p>
+            <ul class="list">
+                <li>&bull; 
+                   Download the training dataset and randomly divide it into 80:20 ratio as training and validation dataset.
+                </li>
+                <li>&bull;
+                    Develop a model to first classify bleeding and non-bleeding frames followed by detection and segmentation of bleeding region in that frame.
+                </li>
+                <li>&bull; 
+                    Store the model, associated weights and files.
+                </li>
+                <li>&bull; 
+                    Perform necessary evaluation for the developed model. Preferred evaluation metrics include: Accuracy, Precision, Recall, F1-Score, AUC-ROC
+                </li>
+                <li>&bull; 
+                    Evaluation metrics for Classification: Accuracy, Recall, F1-Score.
+                </li>
+                <li>&bull; 
+                    Evaluation metrics for Detection: Average Precision, Intersection over Union (IoU).
+                </li>
+                <li>&bull; 
+                    Evaluation metrics for Segmentation: Intersection over Union (IoU), Dice Coefficient.
+                </li>
+                <li>&bull; 
+                    Any ONE interpretability plot: CAMs, LIME, SHAP, feature importance, partial dependence, occlusion, and model explain, fairness etc.
+                </li>
+            </ul>
+            <p class="header">
+                Rules for use of Testing Dataset:
+            </p>
+            <ul class="list">
+                <li>&bull; 
+                    Download the testing dataset. 
+                </li>
+                <li>&bull;
+                    Call the stored model, associated weights and files. Classify, detect, and segment all the frames in the testing dataset 1 and 2 (separately)*.
+                </li>
+                <li>&bull; 
+                    Perform necessary evaluation for the testing dataset 1 and 2 (separately)*.
+                </li>
+                <li>&bull; 
+                    Prepare an excel sheet as per the following column entries:
+                </li>
+                <ul style="margin-left: 2rem" class="list">
+                    <li>&bull; 
+                        S. No. | Image Path | Predicted class label | Xmin | Ymin | Xmax | Ymax | Confidence interval | Intersection over Union (IoU) | Dice Coefficient
+                    </li>
+                </ul>
+                <li>&bull; 
+                    Any ONE interpretability plot: CAMs, LIME, SHAP, feature importance, partial dependence, occlusion, and model explain, fairness etc.
+                </li>
+            </ul>
+            <p class="header">
+                Submission Format:
+            </p>
+            <p>
+                Each team is required to submit the results <span>via EMAIL</span> to  <a href="mailto:misahub2023@gmail.com">misahub2023@gmail.com</a> with following rules in mind.
+            </p>
+            <ul style = "margin-top: 0.8rem;" class="list">
+                <li>
+                    The email should contain
+                </li>
+                <ul style="margin-left: 2rem" class="list">
+                    <li>&bull; 
+                        <span>Challenge name and Team name</span> as the SUBJECT LINE.
+                    </li>
+                    <li>&bull; 
+                        <span>Team member names and affiliation</span> in the BODY OF THE EMAIL.
+                    </li>
+                    <li>&bull; 
+                        <span>Contact number and email address</span> in the BODY OF THE EMAIL.
+                    </li>
+                    <li>&bull; 
+                        <span>A link of the GITHUB Repository (PUBLIC)</span> in the BODY OF THE EMAIL.
+                    </li>
+                    <li>&bull; 
+                        <span>Excel sheet (in xlsx format).</span>
+                    </li>
+                    <li>&bull; 
+                        <span>Readme file (in PDF format).</span>
+                    </li>
+                </ul>
+            </ul>
+            <ul  style = "margin-top: 0.8rem;" class="list">
+                <li>
+                    The GITHUB Repository (PUBLIC) should contain the following:
+                </li>
+                <ul style="margin-left: 2rem" class="list">
+                    <li>&bull; 
+                        Developed code for training, validation, and testing in .py / .mat etc in readable format with comments.
+                    </li>
+                    <li>&bull; 
+                        Stored model, associated weights or files (optional).
+                    </li>
+                    <li>&bull; 
+                        Any utils or assets or config. or checkpoints.
+                    </li>
+                    <li>&bull;
+                        Excel sheet (in xlsx format).
+                    </li>
+                    <li>&bull; 
+                        Readme file (in PDF format).
+                    </li>
+                </ul>
+            </ul>
+            <ul  style = "margin-top: 0.8rem;" class="list">
+                <li>
+                    The README.md file should be <span>readable</span> and in the following format in the <span>same sequence</span>:
+                </li>
+                <ul style="margin-left: 2rem" class="list">
+                    <li>&bull; 
+                        Brief write up and figure of the developed pipeline.
+                    </li>
+                    <li>&bull; 
+                        Achieved results on validation dataset including:
+                    </li>
+                    <ul style="margin-left: 2rem" class="list">
+                        <li>&bull; 
+                            A table of the achieved evaluation metrics on validation dataset for automatic classification, detection, and segmentation of WCE frames. 
+                        </li>
+                        <li>&bull; 
+                            Pictures (resolution 600 DPI) of any 5 best frames selected from validation dataset showing its classification, detection, and segmentation. 
+                        </li>
+                        <li>&bull; 
+                            Pictures (resolution 600 DPI) of achieved interpretability plot of any 5 best frames selected from validation dataset.
+                        </li>
+                    </ul>
+                    <li>&bull; 
+                        Achieved results on testing dataset 1 and 2 including:
+                    </li>
+                    <ul style="margin-left: 2rem" class="list">
+                        <li>&bull; 
+                            A table of the achieved evaluation metrics on testing dataset 1 and 2 (separate)* for automatic classification, detection, and segmentation of WCE frames. 
+                        </li>
+                        <li>&bull; 
+                            Pictures (resolution 600 DPI) of any 5 best frames selected from testing dataset 1 and 2 (separate)* showing its classification, detection, and segmentation. 
+                        </li>
+                        <li>&bull; 
+                            Pictures (resolution 600 DPI) of achieved interpretability plot of any 5 best frames selected from testing dataset 1 and 2 (separate)*.
+                        </li>
+                    </ul>
+                    <li>
+                        Note: A sample readme file and excel sheet will be uploaded on the challenge page. 
+                    </li>
+                </ul>
+            </ul>
+        </div>
+
+        <p class="header">
+            Important Notes:
+        </p>
+        <ul style = "margin-top: 0.8rem;" class="list">
+            <li>&bull; 
+                The participating teams are requested NOT to utilize any other dataset while training their model.
+            </li>
+            <li>&bull; 
+                Real-time analysis is highly encouraged. 
+            </li>
+            <li>&bull; 
+                One interpretability plot is a MUST for submission. Submissions without interpretability plot will be disqualified and NOT evaluated.
+            </li>
+            <li>&bull; 
+                Submitted pictures MUST of high resolution. At least 600 dot-per-inch (DPI).
+            </li>
+            <li>&bull; 
+                Generic YOLO-based or CNN-based submissions will be dis-qualified and <span>NOT</span> evaluated.
+            </li>
+            <li>&bull; 
+                Separate classification/ detection/ segmentation-based submissions will be dis-qualified and NOT evaluated. 
+            </li>
+            <li>&bull; 
+                Participants are allowed to use any n. no. of models, ensemble/ combine etc. to perform automatic classification, detection, and segmentation of WCE frames. 
+            </li>
+            <li>&bull; 
+                Participants can use any AI model. The model evaluation will be done on ‘uniqueness’, ‘reproducibility’, ‘interpretability’, and ‘feasibility of model for real-time analyses. 
+            </li>
+            <li>&bull; 
+                Model files must be uploaded on GITHUB/ Google drive link to check ‘reproducibility’ of the code.
+            </li>
+            <li>&bull; 
+                GITHUB repository should be PUBLIC. Repositories which require access will be NOT be considered for evaluation. 
+            </li>
+            <li>&bull; 
+                Submitted repository <span>MUST</span> be readable, documented properly, and interactive.
+            </li>
+            <li>&bull; 
+                Participants are requested to <span>STRICTLY</span> follow the submission format. 
+            </li>
+            <li>&bull; 
+                The readme file (in PDF format), excel sheet, and GITHUB repository code will be evaluated for the challenge leader board. 
+            </li>
+            <li>&bull; 
+                Participants are requested to acknowledge and cite our datasets for any research purposes. Use of the datasets for commercial products or any purpose other than research is <span>STRICTLY NOT ALLOWED.</span>
+            </li>
+            </ul>
+        </ul>
+        <p class="header">
+            Criteria of judging a submission:
+        </p>
+        <ul style = "margin-top: 0.8rem;" class="list">
+            <li>&bull; 
+                All the received email till February 24, 2024 (result submission closing date) will be considered for evaluation. 
+            </li>
+            <li>&bull; 
+                The GITHUB repository, readme file (in PDF format), and excel sheet (in xlsx format) received for all entries will be downloaded by the organizing team. 
+            </li>
+            <li>&bull; 
+                A common data file will be prepared to compare the evaluation metrics achieved for dataset 1 and 2 (separate)*. 
+            </li>
+            <li>&bull; 
+                A semi-automated python script file will be used to achieve the best evaluation metrics received among all entries.
+            </li>
+            <li>&bull; 
+                Following checklist will be used to select the top three winning teams:
+            </li>
+            <ul style="margin-left: 2rem" class="list">
+                <li>&bull; 
+                    Best evaluation metrics on testing dataset 1 and 2 (separate)*.
+
+                </li>
+                <li>&bull; 
+                    Best interpretability plots achieved on testing dataset 1 and 2 (separate)*.
+
+                </li>
+                <li>&bull; 
+                    Model 'uniqueness', 'reproducibility', 'interpretability', and 'feasibility of model for real-time analyses'. 
+                </li>
+                <li>&bull; 
+                    Readability of the readme file. 
+                </li>
+                <li>&bull; 
+                    Readability of the GITHUB repository.
+                </li>
+            </ul>
+        </ul>
+
+        <div id="register" class="rules heading">
+            <h2>Datasets To Be Used</h2>
+            <p class="header">
+                Training dataset: WCEbleedGen Version V2
+            </p>
+            <p>
+                The training dataset consists of 2618 bleeding and non-bleeding WCE frames collected from multiple internet resources, datasets with a vast variety and types of GI bleeding throughout the GI tract along with medically validated binary masks and bounding boxes in three formats (txt, XML and YOLO txt). The Version V1 of this dataset was utilized as a training dataset in Auto-WCEBleedGen Challenge Version V1. 
+                <br>
+                After the challenge, a Version V2 was released on Nov 19, 2023. In this version, the multiple bleeding frames present in Version V1 were re-annotated. Their new XML and YOLO-TXT were also added. This dataset is first-of-its-kind and promotes generalized comparison with existing state-of-the-art methods, and aims to contribute to better interpretability, and reproducibility of such automated systems.
+            </p>
+            <p class="header">
+                Testing dataset: AutoWCEBleedGen-Test Dataset Version V2
+            </p>
+            <p>
+                AutoWCEBleedGen-Test dataset is an independently collected WCE data containing bleeding and non-bleeding frames of 30 patients suffering from acute, chronic and occult GI bleeding referred at Department of Gastroenterology and HNU, All India Institute of Medical Sciences (AIIMS), New Delhi, India. It was utilized as a testing dataset in the AutoWCEBleedGen Challenge Version V1. It was only accessible to challenge participants and shared through Google drive link throughout the challenge.
+                <br>
+                It consists of a total 564 frames. It is divided into dataset 1 and 2. Dataset 1 contains 49 frames which were randomly collected from seven different patient's data at AIIMS. The frames were then annotated by a group of experienced gastroenterologists at AIIMS. The annotations were marked in the frames. The dataset 2 contains 515 frames which were collected from twenty-three different patient's data. The annotations were NOT marked in the frames. A list of image names with respect to patient were released for the challenge participants. Dataset 1 was developed for non-sequential, random frame analysis. Dataset 2 was developed for sequential-frame analysis. 
+                <br>
+                After the challenge, we developed the improved version of the test dataset and released it Nov 14, 2023 at zenedo platform. In the improved version, we have updated the annotations (binary masks) of dataset 1 and 2, validated with the team of gastroenterologists at AIIMS, and provided un-marked images of dataset 1. Testing dataset of AutoWCEBleedGen Challenge Version V1 was also released in this. 
+                <br>
+                For AutoWCEBleedGen Challenge Version V2, we will release the version V2 of the AutoWCEBleedGen-Test Dataset on January 31, 2024. This version will include medically annotated bounding boxes in three different formats (txt, XML and YOLO txt). 
+            </p>
+        </div>
+
+        <div id="prize" class="awards heading">
+            <h2>PRIZES</h2>
+            <div class="sponsor" style="display:flex;">
+                <ul class="list">
+                    <li>&bull; Certificate to top three winning teams.</li>
+                    <li>&bull; Presentation by the winning team (1st runner-up only) in ICIP 2024. </li>
+                    <li>&bull; E-certificate to each team for participating in the challenge. 
+                    </li>
+                    <li> Note: Participation will only be counted if a team submits their work as per relevant dates decided for the challenge.
+                    </li>
+                    <li>&bull; Challenge paper writing collaboration with the top three winning teams.* (Subject to discussion after the challenge)
+                    </li>
+                </ul>    
+                <!-- <div class = "sponsor-img" >
+                    <img src="assets/sponsor_logo.png" height="130rem" width="130rem">
+                </div>   -->
+            </div>  
+        </div>
+
+        <div id="team" class="awards heading">
+            <h2>MEET THE TEAM</h2>
+            <p class="header" style="margin-bottom: 15px; text-align: center;">
+                ORGANISERS
+            </p>
+            <div class="org">
+                <div class = "box">
+                    <img src="assets/nidhiMam.jpeg" height="250px" style="background-size: cover; background-position: center center;">
+                    <div class="info">
+                        <p class="header resp name" style="margin: 0 auto;">Prof. Nidhi Goel</p>
+                        <p class="header resp" style="font-size: 15px; margin-top: 0%; margin: 0 auto; font-weight: normal; color: #323232; opacity:.6">Dept. of ECE</p>
+                        <p class="header resp" style="font-size: 15px; margin-top: 0%; margin: 0 auto; font-weight: normal; color: #323232; opacity:.6">IGDTUW, Delhi</p>
+                    </div>
+                </div>
+                <div class = "box">
+                    <img src="assets/palakMam.png" height="250px" style="background-size: cover; background-position: center center;">
+                    <div class="info">
+                        <p class="header resp name" style="margin: 0 auto;">Palak Handa</p>
+                        <p class="header resp" style="font-size: 15px; margin-top: 0%; margin: 0 auto; font-weight: normal; color: #323232; opacity:.6">Dept. of ECE</p>
+                        <p class="header resp" style="font-size: 15px; margin-top: 0%; margin: 0 auto; font-weight: normal; color: #323232; opacity:.6">DTU, Delhi</p>
+                    </div>
+                </div>
+                <div class = "box">
+                    <img src="assets/deepakSir.jpeg" height="250px" style="background-size: cover; background-position: center center;">
+                    <div class="info">
+                        <p class="header resp name" style="margin: 0 auto;">Dr. Deepak Gunjan</p>
+                        <p class="header resp" style="font-size: 15px; margin-top: 0%; margin: 0 auto; font-weight: normal; color: #323232; opacity:.6">Dept. of Gastroenterology and HNU</p>
+                        <p class="header resp" style="font-size: 15px; margin-top: 0%; margin: 0 auto; font-weight: normal; color: #323232; opacity:.6">AIIMS Delhi</p>
+                    </div>
+                </div>
+                
+            </div>
+
+            
+            <p class="header" style="margin-bottom: 15px; margin-top: 50px; text-align: center;">
+                MISAHUB MEMBERS
+            </p>
+            <div class="org" style="margin-bottom: 30px;">
+                <div class = "box">
+                    <img src="assets/deepti.png" height="250px" style="background-size: cover; background-position: center center;">
+                    <div class="info">
+                        <p class="header resp name" style="margin: 0 auto;">Deepti Chhabra</p>
+                        <p class="header resp" style="font-size: 15px; margin-top: 0%; margin: 0 auto; font-weight: normal; color: #323232; opacity:.6">IGDTUW, Delhi</p>
+                        <p class="header resp" style="font-size: 15px; margin-top: 0%; margin: 0 auto; font-weight: normal; color: #323232; opacity:.6">(Website Management)</p>
+                    </div>         
+                </div>
+                
+                 <div class = "box">
+                    <img src="assets/anushka.jpeg" height="250px" style="background-size: cover; background-position: center center;">
+                    <div class="info">
+                        <p class="header resp name" style="margin: 0 auto;">Anushka Saini</p>
+                        <p class="header resp" style="font-size: 15px; margin-top: 0%; margin: 0 auto; font-weight: normal; color: #323232; opacity:.6">IGDTUW, Delhi</p>
+                        <p class="header resp" style="font-size: 15px; margin-top: 0%; margin: 0 auto; font-weight: normal; color: #323232; opacity:.6">(Registrations, E-mail and Certificates)</p>
+                    </div>
+                </div>
+
+                <div class = "box">
+                    <img src="assets/advika.jpeg" height="250px" style="background-size: cover; background-position: center center;">
+                    <div class="info">
+                        <p class="header resp name" style="margin: 0 auto;">Advika Thakur</p>
+                        <p class="header resp" style="font-size: 15px; margin-top: 0%; margin: 0 auto; font-weight: normal; color: #323232; opacity:.6">IGDTUW, Delhi</p>
+                        <p class="header resp" style="font-size: 15px; margin-top: 0%; margin: 0 auto; font-weight: normal; color: #323232; opacity:.6">(Social Media)</p>
+                    </div>
+                </div> 
+            </div>
+            <div class="org" style="margin-bottom: 30px;">
+                 <div class = "box">
+                    <img src="assets/divyansh.png" height="250px" style="background-size: cover; background-position: center center;">
+                    <div class="info">
+                        <p class="header resp name" style="margin: 0 auto;">Divyansh Nautiyal</p>
+                        <p class="header resp" style="font-size: 15px; margin-top: 0%; margin: 0 auto; font-weight: normal; color: #323232; opacity:.6">GGSIPU, New Delhi</p>
+                        <p class="header resp" style="font-size: 15px; margin-top: 0%; margin: 0 auto; font-weight: normal; color: #323232; opacity:.6">(Dataset Development)</p>
+                    </div>
+                </div>
+                <!--<div class = "box">-->
+                <!--    <img src="assets/harsh.png" height="250px" style="background-size: cover; background-position: center center;">-->
+                <!--    <div class="info">-->
+                <!--        <p class="header resp name" style="margin: 0 auto;">Harsh Pathak</p>-->
+                <!--        <p class="header resp" style="font-size: 15px; margin-top: 0%; margin: 0 auto; font-weight: normal; color: #323232; opacity:.6">DTU, Delhi</p>-->
+                <!--        <p class="header resp" style="font-size: 15px; margin-top: 0%; margin: 0 auto; font-weight: normal; color: #323232; opacity:.6">(Dataset Development)</p>-->
+                <!--    </div>-->
+                   
+                <!--</div> -->
+            </div>
+        </div>
+
+        <div id="contact" class="contact">
+            <h2>CONTACT</h2>
+            <ul class="list">
+                <!-- <li>&bull; For Registration, <a href="https://docs.google.com/forms/d/e/1FAIpQLScD1TkzIdn8RwpKg_LrH4WqKt7Y_fFO8qcEeU6KI_MYtbtEDA/viewform" target="_blank">Click Here.</a></li> -->
+                <li>&bull; For query, please contact <a href="mailto:misahub2023@gmail.com">misahub2023@gmail.com.</a></li>
+            </ul>         
+        </div>
+
+        <br>
+    </div>
+    </div>
+
+    <footer style="background-color: black" ;>
+
+        &copy;
+        2023-24. All Rights Reserved
+    </footer>
+
+  </body>
+</html>

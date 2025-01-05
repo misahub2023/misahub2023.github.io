@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto-WCEBleedGen</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="icon" type="image/x-icon" href="../favicon/fav.ico">
+</head>
+<body>
+    <div id="wrapper">
+        <nav class="navbar-container">
+            <div style="display:flex; justify-content: space-between; align-items: center;" class="logo-container">
+                <a href="../index-boxes.html"><img class = "logo"  width="120px" height="55px" style = "margin-top: 10px;" src = "assets/misaHub.png"></a>
+                <div class="login-register-respo">
+                    <a href="https://linktr.ee/wcebleedgen" class="button"><span>Key Links</span></a>
+                </div>
+            </div>
+    
+            <div class="bars">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+    
+            <ul class="nav-items">
+                <!-- <li class="nav-link"><a href="index.html">Home</a></li> -->
+                <li class="nav-link"><a href="#challenge">Challenge</a></li>
+                <li class="nav-link"><a href="#dates">Dates</a></li>
+                <li class="nav-link"><a href="#register">Registration</a></li>
+                <li class="nav-link"><a href="#prize">Prizes</a></li>
+                <li class="nav-link"><a href="#result">Results</a></li>
+                <li class="nav-link"><a href="#team">Organisers</a></li>
+                <li class="nav-link"><a href="#contact">Contact</a></li>
+                <div class="login-register">
+                    <a href="https://linktr.ee/wcebleedgen" class="button">Key Links</a>
+                </div>
+            </ul>
+        </nav>
+        <div class="main">
+            <div class="photo">
+                <h1>
+                    Auto-WCEBleedGen Challenge
+                </h1>
+                <h3>
+                    Automatic Detection and Classification of Bleeding and Non-Bleeding frames in Wireless Capsule Endoscopy
+                </h3>
+            </div>
+
+            <div class="update">
+                <h2>IMPORTANT UPDATES</h2>
+                <ul class="list">
+                    <li>&bull; Github links of the exceptional contributors released. Check <span>Key Links</span>.
+                    <li>&bull; Felicitation pictures, videos and presentations released. Check <span>Key Links</span>.
+                    <li>&bull; Winners Revealed. Check <span>Results</span>.
+                    <li>&bull; We extend our heartfelt gratitude to every one for the overwhelming responses. The <span>top five</span> teams have been selected and notified via email.</li>
+                    <li>&bull; The task of selecting the top five teams was no easy feat as the quality of your submissions and efforts were truly remarkable. We are deeply appreciative of the time and dedication you invested. However, please understand that the decision is conclusive and obligatory, and we kindly request you to refrain from emailing us about it.</li>
+                    <li>&bull; The victorious teams will be recognised during the Auto WCEBleedgen Challenge event on <span>November 4, 2023</sapn>, from 2:00 to 3:30 pm at <span>IIT Jammu</span>. Their rankings will be disclosed in the event itself. Subsequently, the list of winners will be posted on the website on November 11, 2023.</li>
+                    <li>&bull; Submissions are <span>CLOSED</span></li> 
+                    <li>&bull; Registrations are <span>CLOSED</span>.</li> 
+                    <!--<li>&bull; Registrations are OPEN till September 20, 2023 mid-night. <span>HURRY, APPLY!</span></li> -->
+                    <li>&bull; Training dataset had been released (September 11, 2023). 
+                    <!--Check <span>KEY LINKS</span>.</li> -->
+                    <!--<span>NOW</span>-->
+                    <li>&bull; Testing dataset had been released (September 21, 2023). 
+                    <!--Check <span>KEY LINKS</span>.</li> -->
+                    <li>&bull; Filling the <span>UNDERTAKING FORM</span> is important. 
+                    <!--Check <span>KEY LINKS</span>.</li>-->
+                    <li>&bull; Rules and Regulations to submit the entries had been <span>UPDATED</span>.</li> 
+                    <li>&bull; We sincerely acknowledge and thank the sponsorship by Prof. Balasubramanian Raman Sir. Heartfelt gratitude for his continued support and guidance! Thanks to our sponsors - <span>CVIP 2023, IIT Jammu</span> and <span>DST-SERB</span>. We are truly grateful for this opportunity.</li>   
+                    <li>&bull; We wanted to express our deepest gratitude to <span>Intec Infonet</span> and <span>iHUB DivyaSampark</span> for the amazing support they’ve shown us in sponsoring the prize money. Thanking them for the incredible support!</li>   
+                    <!-- <li>&bull; Poster released. <a href="https://drive.google.com/file/d/1T8aimi4jBkokhCa1iL_fpqbIHbdM-p5C/view?usp=sharing" style="pointer-events: auto;">Click to view</a></li> -->
+                </ul>         
+            </div>
+
+            <div id="overview" class="overview heading">
+                <h2>OVERVIEW</h2>
+                <p>GI bleeding is a medical condition characterized by bleeding in the digestive tract, which circumscribes esophagus, stomach, small intestine, large intestine (colon), rectum, and anus. Since blood flows into the GI tract, a cascade of risks emerge, ranging from immediate dangers to potential long-term consequences. Excessive blood loss from GI bleeding may lead to a drop in blood pressure, reduced oxygen delivery to organs and tissues, and potentially life-threatening organ dysfunction. According to World Health Organization (WHO), gastrointestinal bleeding is responsible for approximately 300,000 deaths every year globally. These statistics serve as a catalyst for research, propelling innovative treatment modalities and diagnostic advancements aimed at mitigating the dangers posed by GI bleeding.
+                    Therapeutic Endoscopy Guidelines and Recommendations 2018-19 released by Indian Association of Gastrointestinal Endo Surgeons have recommended the use of WCE as an initial test for stable patients with overt or occult bleeding. The disposable capsule-shaped device travels inside the GI tract via peristalsis and comprises of an optical dome, a battery, an illuminator, an imaging sensor, and a RF transmitter. During 6-8 hours of WCE procedure, a video of the GI tract trajectory is recorded on a device attached to the patient’s belt which produces about 57,000-1,00,000 frames; analyzed posterior by experienced health experts. Presently, an experienced gastroenterologist takes approximately 2−3 hours to inspect the captured video of one-patient through a frame-by-frame analysis which is not only time-consuming but also susceptible to human error. In view of the poor ratio of patient-to-doctor across developing countries like India, there arises a need for investigation and state-of-the-art (SOTA) development of robust, interpretable and generalized AI models that can aid in reducing the burden on gastroenterologists and save their valuable time by computer-aided classification between bleeding and non-bleeding frames and further detection of bleeding region in that frame. </p>
+            </div>
+
+            <div id = "challenge" class="challenge heading">
+                <h2>CHALLENGE</h2>
+                <p>The aim of the Auto-WCEBleedGen challenge is to provide an opportunity for the development, testing and evaluation of Artificial Intelligence (AI) models for automatic detection and classification of bleeding and non-bleeding frames extracted from Wireless Capsule Endoscopy (WCE) videos. Auto-WCEBleedGen is first of its kind, consists of different training and test datasets and promotes the development of vendor-independent, interpretable, and generalized AI models. The training dataset consists of 2618 bleeding and non-bleeding WCE frames collected from multiple internet resources, datasets with a vast variety and types of gastrointestinal (GI) bleeding throughout the GI tract along with medically validated binary masks and bounding boxes in three formats (txt, XML and YOLO txt). The test dataset is an independently collected WCE data containing bleeding and non-bleeding frames of more than 30 patients suffering from acute, chronic and occult GI bleeding referred at Department of Gastroenterology and HNU, All India Institute of Medical Sciences, New Delhi, India.
+                </p>
+            </div>
+
+            <div id="dates" class="dates heading">
+                <h2>IMPORTANT DATES</h2>
+                <table>
+                    <th>
+                        Events
+                    </th>
+                    <th>
+                        Dates
+                    </th>
+                    <tr>
+                        <td>E-Registration</td>
+                        <td>August 15, 2023 - September 20, 2023</td>
+                    </tr> 
+                    <tr>
+                        <td>Release of Training Dataset</td>
+                        <td>September 11, 2023</td>
+                    </tr>
+                    <tr>
+                        <td>Release of Testing Dataset</td>
+                        <td>September 21, 2023</td>
+                    </tr>
+                    <tr>
+                        <td>Closing Date for Submission of Results</td>
+                        <td>October 9, 2023 </td>
+                    </tr>
+                    <tr>
+                        <td>Announcement of the Winners over Email</td>
+                        <td>October 14, 2023</td>
+                    </tr>
+                    <tr>
+                        <td>Award Distribution Ceremony (IIT Jammu)</td>
+                        <td>November 4, 2023 (2:00 pm - 3:30 pm)</td>
+                        
+                    </tr>
+                    <tr>
+                        <td>Announcement of the Winning Teams on the Website</td>
+                        <td>November 11, 2023</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div id="register" class="rules heading">
+                <h2>Registration and Rules</h2>
+                <p class="header">
+                    Rules for Participation:
+                </p>
+                <ul class="list">
+                    <li>&bull; This challenge will be open to all students and professionals across globe for free.</li>
+                    <li>&bull; Participants will either register as a solo participant or can form a team.</li>
+                    <li>&bull; Test dataset will be only shared to those who have successfully registered for the challenge.</li>
+                    <li>&bull; The results will be submitted in a specific format over email / submission portal on the challenge page.</li>
+                    <li>&bull; In the case of ties, the organizing committee may rank teams based on the method's novelty and readability of codes. The organizing committee's decision in this regard will be final.</li>
+                    <li>&bull; Attending conference (CVIP-2023) will be highly encouraged.</li>
+                </ul>
+                <p class="header">
+                    Rules for Team Formation:
+                </p>
+                <ul class="list">
+                    <li>&bull; 
+                        A team can have a maximum of 4 participants.
+                    </li>
+                    <li>&bull;
+                        Team members can be from same or different organizations/affiliations.
+                    </li>
+                    <li>&bull; 
+                        A participant can only be a part of a single team.
+                    </li>
+                    <li>&bull; 
+                        Only one member from the team has to register for the challenge.
+                    </li>
+                    <li>&bull; 
+                        One team can only have one registration. Multiple registrations can lead to disqualification.
+                    </li>
+                    <li>&bull; 
+                        There is no limitations on the number of teams from the same organizations/affiliations. (However, one participant can only be part of a unique team.)
+                    </li>
+                </ul>
+                <p class="header">
+                    Rules for use of Training Dataset:
+                </p>
+                <ul class="list">
+                    <li>&bull; 
+                       Download the training dataset and randomly divide it into 80:20 ratio as training and validation dataset.
+                    </li>
+                    <li>&bull;
+                        Develop a model to first classify bleeding and non-bleeding frames and then detect the bleeding region from the bleeding frames using the training and validation dataset.
+                    </li>
+                    <li>&bull; 
+                        Store the model, associated weights and files.
+                    </li>
+                    <li>&bull; 
+                        Perform necessary evaluation for the developed model. Formulas can be referred in the Readme.txt file of the test dataset.
+                    </li>
+                    <ul style="margin-left: 2rem" class="list">
+                        <li>&bull; 
+                            Evaluation metrics for Classification: Accuracy, Recall, F1-Score
+                        </li>
+                        <li>&bull; 
+                            Evaluation metrics for Detection: Average Precision, Mean-Average Precision, Intersection over Union (IoU)
+                        </li>
+                        <li>&bull; 
+                            Any <span>ONE</span> interpretability plot: CAMs, LIME, SHAP, feature importance, partial dependence, occlusion, and model explain, fairness etc.
+                        </li>
+                    </ul>
+                </ul>
+                <p class="header">
+                    Rules for use of Testing Dataset:
+                </p>
+                <ul class="list">
+                    <li>&bull; 
+                        Download the zip file of testing dataset.
+                    </li>
+                    <li>&bull;
+                        Call the stored model, associated weights and files. Predict all the frames in the testing dataset 1 and 2.
+                    </li>
+                    <li>&bull; 
+                        Perform necessary evaluation for the testing dataset 1 and 2.
+                    </li>
+                    <ul style="margin-left: 2rem" class="list">
+                        <li>&bull; 
+                            Prepare an excel sheet as per the instructions mentioned in the readme.txt of the zip file.
+                        </li>
+                        <li>&bull; 
+                            Any <span>ONE</span> interpretability plot: CAMs, LIME, SHAP, feature importance, partial dependence, occlusion, and model explain, fairness etc.
+                        </li>
+                    </ul>
+                </ul>
+                <p class="header">
+                    Submission Format:
+                </p>
+                <p>
+                    Each team is required to submit the results <span>via EMAIL</span> to  <a href="mailto:misahub2023@gmail.com">misahub2023@gmail.com</a> with following rules in mind.
+                </p>
+                <ul style = "margin-top: 0.8rem;" class="list">
+                    <li>
+                        The email should contain
+                    </li>
+                    <ul style="margin-left: 2rem" class="list">
+                        <li>&bull; 
+                            <span>Team name</span> as the SUBJECT LINE.
+                        </li>
+                        <li>&bull; 
+                            <span>Team member names</span> in the BODY OF THE EMAIL.
+                        </li>
+                        <li>&bull; 
+                            <span>Contact number</span> in the BODY OF THE EMAIL.
+                        </li>
+                        <li>&bull; 
+                            <span>A link of the GITHUB Repository (PUBLIC)</span> in the BODY OF THE EMAIL.
+                        </li>
+                    </ul>
+                </ul>
+                <ul  style = "margin-top: 0.8rem;" class="list">
+                    <li>
+                        The GITHUB Repository (PUBLIC) should contain the following:
+                    </li>
+                    <ul style="margin-left: 2rem" class="list">
+                        <li>&bull; 
+                            Developed code for training, validation, and testing in .py / .mat etc in readable format with comments.
+                        </li>
+                        <li>&bull; 
+                            Stored model, associated weights or files (optional).
+                        </li>
+                        <li>&bull; 
+                            Any utils or assets or config. or checkpoints.
+                        </li>
+                        <li>&bull;
+                            Excel sheet containing the image IDs and predicted class labels of testing dataset 1 and 2.
+                        </li>
+                        <li>&bull; 
+                            README.md
+                        </li>
+                    </ul>
+                </ul>
+                <ul  style = "margin-top: 0.8rem;" class="list">
+                    <li>
+                        The README.md file should be <span>readable</span> and in the following format in the <span>same sequence</span>:
+                    </li>
+                    <ul style="margin-left: 2rem" class="list">
+                        <li>&bull; 
+                            A table of the achieved evaluation metrics (Classification: Accuracy, Recall, F1-Score | Detection: Average Precision, Mean-Average Precision, Intersection over Union(IoU)) of the classification and detection of validation dataset.
+                        </li>
+                        <li>&bull; 
+                            Screenshots/pictures of any 10 best images selected from validation dataset showing its classification and detection (bounding box with confidence level).
+                        </li>
+                        <li>&bull; 
+                            Screenshots/ pictures of achieved interpretability plot of any 10 best images selected from validation dataset.
+                        </li>
+                        <li>&bull; 
+                            Screenshots/pictures of any 5 best images selected from testing dataset 1 and 2 separately showing its classification and detection (bounding box with confidence level).
+                        </li>
+                        <li>&bull; 
+                            Screenshots/ pictures of achieved interpretability plot of any 5 best images selected from testing dataset 1 and 2 separately.
+                        </li>
+                    </ul>
+                </ul>
+                <p style="margin-top: 1.2rem;">
+                    Please note that any GITHUB Repository which requires <span>access</span> will be <span>NOT</span> be considered for evaluation by our team. The <span>README.md file, CODE</span> and <span>EXCEL SHEET</span> will be evaluated for the challenge leader board. Participants are requested to document it properly and make it interactive and readable.
+                </p>
+            </div>
+
+            <div class="awards heading">
+                <h2>TARGET AUDIENCE</h2>
+                <p style="font-size:14px;">
+                    The target audience includes B.Tech, M. Tech, Ph.D. students of all branches, years and industry professionals.
+                </p>
+            </div>
+
+            <div id="prize" class="awards heading">
+                <h2>PRIZES</h2>
+                <div class="sponsor" style="display:flex;">
+                    <ul class="list">
+                        <li>&bull; Exciting Cash Prizes sponsored by <span>Intec Infonet</span> and <span>iHUB DivyaSampark</span></li>
+                        <ul class="list">
+                             <li>&bull; First Prize - <span>₹ 10,000</span> </li>
+                             <li>&bull; Second Prize - <span>₹ 8,000</span> </li>
+                             <li>&bull; Third Prize - <span>₹ 5,000</span> </li>
+                        </ul>
+                        <li>&bull; Free Registration to top-5 teams in <span>CVIP 2023</span> and goodies by <span>CVIP 2023, IIT Jammu</span> and <span>DST-SERB</span>.</li>
+                        <li>&bull; Winter Internship Opportunity at MISAHUB</li>
+                        <li>&bull; Paper Writing Collaboration</li>
+                        <li>&bull; E-certificate to each participant</li>
+                    </ul>
+                    <div class="logos">
+                        <div class = "sponsor-img" >
+                            <img src="assets/intec.png" height="100rem" width="100rem">
+                            <img src="assets/ihub.png" height="100rem" width="100rem">
+                            <img src="assets/inserbdia.jpeg" height="100rem" width="100rem">
+                        </div>
+                        <div class = "sponsor-img" style="margin-top: 1.2rem;" >
+                            <img src="assets/cvip.png" height="100rem" width="160rem">
+                            <img src="assets/iitj.png" height="100rem" width="160rem">
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                
+            </div>
+            
+            <div id="result" class="dates heading">
+                <h2>RESULTS</h2>
+                <table>
+                    <th>
+                        S.No.
+                    </th>
+                    <th style="width:20%">
+                        Position
+                    </th>
+                    <th style="width:20%">
+                        Team Name
+                    </th>
+                    <th>
+                        Affiliation
+                    </th>
+                    
+                    <tr>
+                        <td>1</td>
+                        <td>First Position</td>
+                        <td>Failed Wizards</td>
+                        <td>IIT Tirupati</td>
+                        
+                    </tr> 
+                    <tr>
+                        <td>2</td>
+                        <td>Second Position</td>
+                        <td>DeepNet</td>
+                        <td>Jawaharlal Nehru University</td>
+                        </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Third Position</td>
+                        <td>KU Researchers</td>
+                        <td>Khalifa University & Halcon Systems LLC (UAE)</td>
+                        </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Consolation</td>
+                        <td>The Coders</td>
+                        <td>Jawaharlal Nehru University</td>
+                        </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Consolation</td>
+                        <td>PRIA</td>
+                        <td>IIT Tirupati, VIT Chennai, IIT Indore and Thapar Institute of Engineering and Technology</td>
+                         </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Consolation</td>
+                        <td>SSSIHLDMACS</td>
+                        <td>Sri Sathya Sai Institute of Higher Learning</td>
+                        </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>Consolation</td>
+                        <td>Colorlab</td>
+                        <td>Norwegian University of Science and Technology (Norway)</td>
+                       </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>Consolation</td>
+                        <td>NGBU</td>
+                        <td>Tata Elxsi</td>
+                        </tr>
+                </table>
+            </div>
+
+            <div id="team" class="awards heading">
+                <h2>MEET THE TEAM</h2>
+                <p class="header" style="margin-bottom: 15px; text-align: center;">
+                    ORGANISERS
+                </p>
+                <div class="org">
+                    <div class = "box">
+                        <img src="assets/nidhiMam.jpeg" height="250px" style="background-size: cover; background-position: center center;">
+                        <div class="info">
+                            <p class="header resp name" style="margin: 0 auto;">Prof. Nidhi Goel</p>
+                            <p class="header resp" style="font-size: 15px; margin-top: 0%; margin: 0 auto; font-weight: normal; color: #323232; opacity:.6">Dept. of ECE</p>
+                            <p class="header resp" style="font-size: 15px; margin-top: 0%; margin: 0 auto; font-weight: normal; color: #323232; opacity:.6">IGDTUW, Delhi</p>
+                        </div>
+                       
+                    </div>
+                    <div class = "box">
+                        <img src="assets/ramanSir.jpeg" height="250px" style="background-size: cover; background-position: center center;">
+                        <div class="info">
+                            <p class="header resp long" style="margin: 0 auto;">Prof. Balasubramanian</p>
+                            <p class="header resp long" style="margin: 0 auto;">Raman</p>
+                            <p class="header resp" style="font-size: 15px; margin-top: 0%; margin: 0 auto; font-weight: normal; color: #323232; opacity:.6">Dept. of CSE</p>
+                            <p class="header resp" style="font-size: 15px; margin-top: 0%; margin: 0 auto; font-weight: normal; color: #323232; opacity:.6">IIT Roorkee</p>
+                        </div>
+                    </div>
+                    <div class = "box">
+                        <img src="assets/palakMam.png" height="250px" style="background-size: cover; background-position: center center;">
+                        <div class="info">
+                            <p class="header resp name" style="margin: 0 auto;">Palak Handa</p>
+                            <p class="header resp" style="font-size: 15px; margin-top: 0%; margin: 0 auto; font-weight: normal; color: #323232; opacity:.6">Dept. of ECE</p>
+                            <p class="header resp" style="font-size: 15px; margin-top: 0%; margin: 0 auto; font-weight: normal; color: #323232; opacity:.6">DTU, Delhi</p>
+                        </div>
+                    </div>
+                    
+                
+                </div>
+
+                <p class="header" style="text-align: center; margin-bottom: 15px; margin-top: 25px;">
+                    <!--margin-top: 50px-->
+                    <!--CLINICAL COLLEAGUES-->
+                </p>
+                <div class="org">
+                    <div class = "box">
+                        <img src="assets/deepakSir.jpeg" height="250px" style="background-size: cover; background-position: center center;">
+                        <div class="info">
+                            <p class="header resp name" style="margin: 0 auto;">Dr. Deepak Gunjan</p>
+                            <p class="header resp long2" style="font-size: 13px; margin-top: 0%; margin: 0 auto; font-weight: normal; color: #323232; opacity:.6">Dept. of Gastroenterology & HNU</p>
+                            <p class="header resp long2" style="font-size: 13px; margin-top: 0%; margin: 0 auto; font-weight: normal; color: #323232; opacity:.6">AIIMS, New Delhi</p>
+                        </div>
+                       
+                    </div>
+                    
+                    <!--<div class = "box">-->
+                    <!--    <img src="assets/mahapatraSir.jpeg" height="250px" style="background-size: cover; background-position: center center;">-->
+                    <!--    <div class="info">-->
+                    <!--        <p class="header resp name" style="margin: 0 auto;">Dr. S. J. Mahapatra</p>-->
+                    <!--        <p class="header resp long2" style="font-size: 13px; margin-top: 0%; margin: 0 auto; font-weight: normal; color: #323232; opacity:.6">Dept. of Gastroenterology & HNU</p>-->
+                    <!--        <p class="header resp long2" style="font-size: 13px; margin-top: 0%; margin: 0 auto; font-weight: normal; color: #323232; opacity:.6">AIIMS, New Delhi</p>-->
+                    <!--    </div>-->
+                    <!--</div>-->
+                </div>
+                
+                <p class="header" style="margin-bottom: 15px; margin-top: 50px; text-align: center;">
+                    MISAHUB MEMBERS
+                </p>
+                <div class="org" style="margin-bottom: 30px;">
+                    <div class = "box">
+                        <img src="assets/Deepti.png" height="250px" style="background-size: cover; background-position: center center;">
+                        <div class="info">
+                            <p class="header resp name" style="margin: 0 auto;">Deepti Chhabra</p>
+                            <p class="header resp" style="font-size: 15px; margin-top: 0%; margin: 0 auto; font-weight: normal; color: #323232; opacity:.6">IGDTUW, Delhi</p>
+                            <p class="header resp" style="font-size: 15px; margin-top: 0%; margin: 0 auto; font-weight: normal; color: #323232; opacity:.6">(Website Management)</p>
+                        </div>         
+                    </div>
+                    
+                    <div class = "box">
+                        <img src="assets/prakriti.jpeg" height="250px" style="background-size: cover; background-position: center center;">
+                        <div class="info">
+                            <p class="header resp name" style="margin: 0 auto;">Prakriti Maurya</p>
+                            <p class="header resp" style="font-size: 15px; margin-top: 0%; margin: 0 auto; font-weight: normal; color: #323232; opacity:.6">IGDTUW, Delhi</p>
+                            <p class="header resp" style="font-size: 15px; margin-top: 0%; margin: 0 auto; font-weight: normal; color: #323232; opacity:.6">(Registrations)</p>
+                        </div>
+                    </div>
+
+                    <div class = "box">
+                        <img src="assets/Shreshtha.jpeg" height="250px" style="background-size: cover; background-position: center center;">
+                        <div class="info">
+                            <p class="header resp name" style="margin: 0 auto;">Shreshtha Jha</p>
+                            <p class="header resp" style="font-size: 15px; margin-top: 0%; margin: 0 auto; font-weight: normal; color: #323232; opacity:.6">IGDTUW, Delhi</p>
+                            <p class="header resp" style="font-size: 15px; margin-top: 0%; margin: 0 auto; font-weight: normal; color: #323232; opacity:.6">(Email Management)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="org" style="margin-bottom: 30px;">
+                    <div class = "box">
+                        <img src="assets/Lavanya.jpeg" height="250px" style="background-size: cover; background-position: center center;">
+                        <div class="info">
+                            <p class="header resp name" style="margin: 0 auto;">Lavanya</p>
+                            <p class="header resp" style="font-size: 15px; margin-top: 0%; margin: 0 auto; font-weight: normal; color: #323232; opacity:.6">IPU, Delhi</p>
+                            <p class="header resp" style="font-size: 15px; margin-top: 0%; margin: 0 auto; font-weight: normal; color: #323232; opacity:.6">(Analysis, Social Media)</p>
+                        </div>
+                    </div>
+                    <div class = "box">
+                        <img src="assets/Advika.jpeg" height="250px" style="background-size: cover; background-position: center center;">
+                        <div class="info">
+                            <p class="header resp name" style="margin: 0 auto;">Advika Thakur</p>
+                            <p class="header resp" style="font-size: 15px; margin-top: 0%; margin: 0 auto; font-weight: normal; color: #323232; opacity:.6">IGDTUW, Delhi</p>
+                            <p class="header resp" style="font-size: 15px; margin-top: 0%; margin: 0 auto; font-weight: normal; color: #323232; opacity:.6">(Analysis, Social Media)</p>
+                        </div>
+                       
+                    </div>
+                    <div class = "box">
+                        <img src="assets/Nishu.jpeg" height="250px" style="background-size: cover; background-position: center center;">
+                        <div class="info">
+                            <p class="header resp name" style="margin: 0 auto;">Nishu Pandey</p>
+                            <p class="header resp" style="font-size: 15px; margin-top: 0%; margin: 0 auto; font-weight: normal; color: #323232; opacity:.6">IGDTUW, Delhi</p>
+                            <p class="header resp" style="font-size: 15px; margin-top: 0%; margin: 0 auto; font-weight: normal; color: #323232; opacity:.6">(Test Dataset)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="org" style="margin-bottom: 20px;">
+                <div class = "box">
+                    <img src="assets/harshita.jpeg" height="250px" style="background-size: cover; background-position: center center;">
+                    <div class="info">
+                        <p class="header resp name" style="margin: 0 auto;">Harshita Mangotra</p>
+                        <p class="header resp" style="font-size: 15px; margin-top: 0%; margin: 0 auto; font-weight: normal; color: #323232; opacity:.6">IGDTUW, Delhi</p>
+                        <p class="header resp" style="font-size: 15px; margin-top: 0%; margin: 0 auto; font-weight: normal; color: #323232; opacity:.6">(Analysis)</p>
+                    </div>
+                </div>
+                <div class = "box">
+                    <img src="assets/tanisha.jpeg" height="250px" style="background-size: cover; background-position: center center;">
+                    <div class="info">
+                        <p class="header resp name" style="margin: 0 auto;">Tanisha Singh</p>
+                        <p class="header resp" style="font-size: 15px; margin-top: 0%; margin: 0 auto; font-weight: normal; color: #323232; opacity:.6">IGDTUW, Delhi</p>
+                        <p class="header resp" style="font-size: 15px; margin-top: 0%; margin: 0 auto; font-weight: normal; color: #323232; opacity:.6">(Analysis)</p>
+                    </div>
+                </div>
+                
+                <div class = "box">
+                    <img src="assets/charvi.jpeg" height="250px" style="background-size: cover; background-position: center center;">
+                    <div class="info">
+                        <p class="header resp name" style="margin: 0 auto;">Charvi Bansal</p>
+                        <p class="header resp" style="font-size: 15px; margin-top: 0%; margin: 0 auto; font-weight: normal; color: #323232; opacity:.6">IGDTUW, Delhi</p>
+                        <p class="header resp" style="font-size: 15px; margin-top: 0%; margin: 0 auto; font-weight: normal; color: #323232; opacity:.6">(Analysis)</p>
+                    </div>
+                   
+                </div>
+            </div>
+            <div class="org" style="margin-bottom: 20px;">
+                <div class = "box">
+                    <img src="assets/nikita.jpeg" height="250px" style="background-size: cover; background-position: center center;">
+                    <div class="info">
+                        <p class="header resp name" style="margin: 0 auto;">Nikita Garg</p>
+                        <p class="header resp" style="font-size: 15px; margin-top: 0%; margin: 0 auto; font-weight: normal; color: #323232; opacity:.6">IGDTUW, Delhi</p>
+                        <p class="header resp" style="font-size: 15px; margin-top: 0%; margin: 0 auto; font-weight: normal; color: #323232; opacity:.6">(Certificates)</p>
+                    </div>
+                   
+                </div>
+                <!--<div class = "box">-->
+                <!--    <img src="assets/Lakshay.jpeg" height="250px" style="background-size: cover; background-position: center center;">-->
+                <!--    <div class="info">-->
+                <!--        <p class="header resp name" style="margin: 0 auto;">Lakshay</p>-->
+                <!--        <p class="header resp" style="font-size: 15px; margin-top: 0%; margin: 0 auto; font-weight: normal; color: #323232; opacity:.6">DTU, Delhi</p>-->
+                <!--        <p class="header resp" style="font-size: 15px; margin-top: 0%; margin: 0 auto; font-weight: normal; color: #323232; opacity:.6">(Certificates)</p>-->
+                <!--    </div>-->
+                   
+                <!--</div>-->
+                <div class = "box">
+                    <img src="assets/divyansh.jpeg" height="250px" style="background-size: cover; background-position: center center;">
+                    <div class="info">
+                        <p class="header resp name" style="margin: 0 auto;">Divyansh Nautiyal</p>
+                        <p class="header resp" style="font-size: 15px; margin-top: 0%; margin: 0 auto; font-weight: normal; color: #323232; opacity:.6">IPU, Delhi</p>
+                        <p class="header resp" style="font-size: 15px; margin-top: 0%; margin: 0 auto; font-weight: normal; color: #323232; opacity:.6">(Analysis, Social Media)</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="contact" class="contact">
+                <h2>CONTACT</h2>
+                <ul class="list">
+                    <!-- <li>&bull; For Registration, <a href="https://docs.google.com/forms/d/e/1FAIpQLScD1TkzIdn8RwpKg_LrH4WqKt7Y_fFO8qcEeU6KI_MYtbtEDA/viewform" target="_blank">Click Here.</a></li> -->
+                    <li>&bull; For query, please contact <a href="mailto:misahub2023@gmail.com">misahub2023@gmail.com</a>, <a href="mailto:ask.misahub@gmail.com">ask.misahub@gmail.com.</a></li>
+                </ul>         
+            </div>
+
+            <br>
+        </div>
+        
+    </div>
+
+    <footer style="background-color: black" ;>
+    
+        &copy;
+        2022 - Present. All Rights Reserved
+    </footer>
+
+    <script src = "action.js"></script>
+</body>
+</html>
+
+

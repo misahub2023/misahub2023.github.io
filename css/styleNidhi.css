@@ -1,0 +1,613 @@
+*{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Google Sans Regular";
+  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Libre Baskerville', serif;
+  font-family: 'Lobster Two', cursive;
+  font-family: 'Lora', serif;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+}
+
+body{
+  background: linear-gradient(to right top,rgb(249, 249, 222), rgba(243,243, 174, 0.3));
+}
+
+
+
+.tm-header .container .row img{
+  transition: 1s ease;
+}
+.tm-header .container .row img:hover{
+  transform: scale(1.17);
+  text-shadow: 3px 3px 8px #FF720B;
+}
+
+@media(max-width: 991px){
+  .tm-header .container .row img{
+      margin-left: -2.1rem;
+      margin-bottom: -10rem;
+      height: 200px;
+      width: auto;
+  }
+}
+
+@media(max-width: 767px){
+  .tm-header .container .row img{
+      margin-left: -1rem;
+  }
+}
+
+.column {
+  float: left;
+  /* width: 33.33%; */
+  padding-left: 30px;
+}
+
+
+
+.tm-header1 {
+  background: black;
+  height: 90px;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  z-index: 20;
+}
+
+.tm-header2 {
+  position: fixed;
+  margin-left: 90%;
+  margin-top: 1.5rem;
+  float: right;
+  top: 0;
+  z-index: 25;
+}
+
+.tm-header3 {
+  position: fixed;
+  margin-left: 85%;
+  margin-top: 1.5rem;
+  float: right;
+  top: 0;
+  z-index: 30;
+}
+
+.tm-site-name-container {
+  padding-top: 20px;
+}
+.tm-site-name {
+  color: #fcdd44;
+  font-size: 27px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.tm-site-name:hover,
+.tm-site-name:focus {
+  color: #ff720b;
+}
+
+.tm-nav {
+  display: flex;
+  justify-content: flex-end;
+}
+.tm-nav li a {
+  margin: 20px 5px;
+}
+
+.mobile-menu-icon {
+  display: none;
+}
+
+
+@media screen and (max-width: 767px) {
+  .tm-banner {
+    margin-top: 8%;
+  }
+
+  /* http://www.impressivewebs.com/animate-display-block-none/
+	 * Comment by Jon Christensen
+	 */
+  .tm-nav.show {
+    opacity: 1;
+    height: auto;
+    transition: opacity 1s, height 0;
+  }
+
+  .tm-nav {
+    opacity: 0;
+    transition: opacity 1s, height 0 1s;
+    height: 0;
+    position: fixed;
+    z-index: 1000;
+    top: 69px;
+    right: 15px;
+    background: rgba(15, 15, 15, 0.7);
+    transition: all 0.3s ease;
+  }
+
+  .tm-nav li {
+    float: none;
+  }
+
+  .tm-nav li a {
+    color: white;
+    display: block;
+    padding: 5px 15px;
+    /* margin: 20px 1px; */
+  }
+
+  /* mobile menu icon */
+  .mobile-menu-icon {
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    background-color: rgba(15, 15, 15, 0.7);
+    z-index: 1000;
+    display: flex;
+  }
+
+  .mobile-menu-icon-wrap {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* mobile menu icon stick */
+  .mobile-menu-icon .stick {
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    background: white;
+    transition: ease-in-out 0.1s;
+  }
+
+  .mobile-menu-icon .stick-1 {
+    transform: translate(0, -10px);
+    transition-delay: 0.1s;
+  }
+
+  .mobile-menu-icon .stick-4 {
+    transform: translate(0, 10px);
+    transition-delay: 0.1s;
+  }
+
+  .mobile-menu-icon.show .stick-1 {
+    transform: translate(0, 0);
+    opacity: 0;
+    transition-delay: 0s;
+  }
+
+  .mobile-menu-icon.show .stick-4 {
+    transform: translate(0, 0);
+    opacity: 0;
+    transition-delay: 0s;
+  }
+
+  .mobile-menu-icon.show .stick-2 {
+    transform: rotate(-45deg);
+    transition-delay: 0.1s;
+  }
+
+  .mobile-menu-icon.show .stick-3 {
+    transform: rotate(45deg);
+    transition-delay: 0.1s;
+  }
+  
+}
+
+
+.tm-nav {
+  margin: 0% 0%;
+  display: block;
+  overflow: hidden;
+}
+.tm-nav li {
+  list-style: none;
+  float: left;
+}
+.tm-nav li a {
+  color: white;
+  display: block;
+  /* padding: 45px 34px 15px 34px; */
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  padding: 10px 2px;
+  margin: 30px 5px;
+  border-radius: 10px;
+}
+.tm-nav li a.active,
+.tm-nav li a:focus,
+.tm-nav li a:hover {
+  background: #fcdd44;
+  color: #000;
+}
+.tm-banner {
+  margin-top: 2%;
+}
+
+.tm-gray-bg {
+  background-color: #fbfcf6;
+}
+
+a{
+  text-decoration: none;
+}
+a:hover{
+  text-decoration: none;
+}
+h1, h3, h4, h5, h6{
+  font-family: 'Lobster Two', cursive;
+
+}
+h2{
+  font-family: 'Libre Baskerville', serif;
+}
+section{
+  padding: 60px 0;
+  overflow: hidden;
+}
+
+/** Banner section css **/
+#hero{
+  width: 100%;
+  height: 70vh;
+  position: relative;
+  overflow: hidden;
+  padding: 3rem 0;
+  background: url(../images/img12.png);
+  /**background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(73, 73, 73, 0.3)),url(../images/img6.png);**/
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.glass-morphism-card{
+  padding: 30px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  border: 1px solid rgba(255,255,255,0.18);
+  text-align: left;
+}
+
+.glass-morphism-card h1 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  font-size: 68px;
+  font-weight: 700;
+  line-height: 56px;
+  font-family: 'Libre Baskerville', serif;
+  justify-content: center;
+  align-items: right;
+  color: #030303;
+  margin: 0 0 10px 0;
+  
+}
+
+.glass-morphism-card:hover {
+  transform: scale(1.1);
+}
+
+
+/**#hero h1{
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  font-size: 68px;
+  font-weight: 700;
+  line-height: 56px;
+  font-family: 'Libre Baskerville', serif;
+  justify-content: center;
+  align-items: right;
+  color: #fff;
+  margin: 0 0 10px 0;
+
+}**/
+/**Banner section css ends here**/
+
+/** Quotation section css begins here**/
+
+.quotation-section {
+  background-color: #DFF0D8; /* light shade of lime */
+  padding: 20px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  font-style: italic;
+}
+
+blockquote {
+  margin: 0;
+  padding: 0;
+  font-family: Georgia, serif;
+  color: #333;
+}
+
+/** Quotation section css ends here**/
+
+/**MAIN CONTENT CSS BEGINS HERE**/
+.wrapper{
+
+  margin: 50px auto;
+  border-radius: 10px;
+  padding-top: 5px;
+  padding-bottom: 50px;
+  
+
+}
+
+.feature-box {
+/*background-color: #F2F2F2;  a light grey color for the background */
+ padding: 30px;
+ box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /*a subtle box-shadow effect **/
+ background-color: #f5f5f5;
+ border: 1px solid #ddd;
+ display: flex;
+ align-items: flex-start;
+ border-radius: 5px;
+
+  background:linear-gradient(#eeede5,rgba(220, 220, 220, 0.3));
+  min-height: 80vh;
+  width: 100%;
+  background: linear-gradient(to right bottom, rgba(255,255,255,0.7),rgba(255,255,255,0.3));
+  overflow: hidden;
+  
+
+}
+
+.profile {
+  display: flex; /* use flexbox to align photo and details side-by-side */
+  /* align-items: center; center vertically */
+  flex-direction: row;
+  align-items: flex-start;
+
+}
+
+
+.photo {
+  width: 40%;
+  margin-left: 20px;
+  border-radius: 5%; /*make the photo circular*/ 
+  overflow: hidden; /*clip the edges of the photo */
+  order: 1; /* added this line to change the order */
+  text-align: center;
+  margin-bottom: 20px;
+  
+}
+.details {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  border-radius: 5%;
+  box-shadow: 0px 0px 10px #ccc;
+}
+.text-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 20px;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+/* CSS for the hover effect */
+.photo-img:hover.text-overlay {
+opacity: 1;
+}
+
+.details h2 {
+  margin-top: 0;
+  font-size: 24px;
+  font-weight: bold;
+  font-style: italic;
+  
+}
+.profile h2:hover {
+  transform: translateY(-5px);
+  /*box-shadow: 0 12px 24px 0 rgba(250, 251, 251, 0.37);*/
+}
+
+.details p {
+  margin-bottom: 0;
+  font-size: 18px;
+  line-height: 1.5;
+  font-family: Georgia, serif;
+  order: 2; /* added this line to change the order */
+  
+}
+.details h3 {
+  margin-top: 30px;
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: Georgia, serif;
+  font-style: italic;
+  letter-spacing: 1px;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 0px;
+}
+
+
+.details ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.details li {
+  margin-bottom: 10px;
+  padding-left: 25px;
+  position: relative;
+  line-height: 1.5;
+}
+.fa-person-chalkboard:before {
+  content: "\f502";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #f28c08;
+}
+.fa-books:before {
+  content: "\f02d";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #f28c08;
+}
+
+
+
+
+
+
+
+/** MAIN CONTENT CSS ENDS HERE**/
+
+
+/** Main content css starts here
+.wrapper{
+
+  margin: 50px auto;
+  border-radius: 10px;
+  padding-top: 5px;
+  padding-bottom: 50px;
+  box-shadow: 0 0 40px 2px rgb(229, 251, 193);
+
+}
+
+.feature-box{
+  /**padding: 20px;
+  background:linear-gradient(#eeede5,rgba(220, 220, 220, 0.3));**/
+/**    background: white;
+  min-height: 80vh;
+  width: 100%;
+  background: linear-gradient(to right bottom, rgba(255,255,255,0.7),rgba(255,255,255,0.3));
+  overflow: hidden;
+  border-radius: 2rem;
+  
+}
+.feature-box h1{
+  margin-top: 5%;
+  font-size: 55px;
+  color: #0b0700;
+  text-decoration: underline overline;
+  text-decoration-color: rgb(2, 74, 74);
+  text-decoration-style: solid;
+  text-align: start;
+
+}
+.feature-img {
+  margin-top: 5%;
+  width: 25%;
+  float: right;
+  margin-left: 20px;
+  margin-bottom: 2em;
+  margin-top: 0%;
+  padding: 20px;
+  border-radius: 10px;
+
+}
+
+.feature-box p{
+  font-family:'Cormorant Garamond', serif;
+  margin: 40px auto;
+  display: block;
+  width: 50%;
+  font-size: 25px;
+  color: #410202;
+  justify-content: left;
+}
+
+
+main content css ends here **/
+
+
+
+footer {
+  /* border-top: 1px solid #f1f1f1; */
+  /* box-shadow: 0px -2px 3px #f1f1f1; */
+  text-align: center;
+  /* color: aliceblue; */
+  color: white;
+  padding: 3rem;
+  position: relative;
+  left: 0;
+  bottom: 0;
+  /* background-color: rgb(64, 3, 97); */
+  background-color: black;
+  top: 5rem;
+}
+
+.footer_right_part{
+  position: relative;
+    /* margin-left: 70%; */
+    /* margin-top:75%; */
+    text-align: right;
+    /* margin-top: -2.5rem; */
+    float: right;
+    margin-right:10px;
+    top: 0;
+    z-index: 30;
+    color: white;
+    background-color: black;
+}
+
+.footer_left_part {
+  position: relative;
+  /* margin-left: 70%; */
+  /* margin-top:75%; */
+  text-align: left;
+  /* margin-top: -2.5rem; */
+  float: left;
+  margin-right: 10px;
+  top: 0;
+  z-index: 30;
+  color: white;
+  background-color: black;
+}
+
+.social {
+  text-align: center;
+  margin: 2rem;
+}
+
+.socicons {
+  font-size: 1.3rem;
+}
+
+
+
+

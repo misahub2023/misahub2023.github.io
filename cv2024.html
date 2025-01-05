@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capsule Vision Challenge 2024</title>
+    <link rel="stylesheet" href="cv2024-styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@300&display=swap">
+    <link rel="icon" type="image/x-icon" href="../favicon/fav.ico">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="https://misahub.in/index-boxes.html">
+                <img src="/cv2024-assets/misaHub.png" alt="Logo">
+                </a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle">
+                &#9776; <!-- Hamburger icon -->
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#overview">Goal</a></li>
+                <li><a href="#challenge">Data</a></li>
+                <li><a href="#dates">Evaluation</a></li>
+                <li><a href="#registration">Submission</a></li>
+                <li><a href="#prizes">Prizes</a></li>
+                <li><a href="#organisers">Organisers</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="https://linktr.ee/cv.2024" class="button">Key Links</a></li> <!-- Stylish button -->
+            </ul>
+        </nav>
+    </header>
+    
+    <main style="font-size: 16px; color: #666;">
+        <div class="content-box">
+            <div class="top-box">
+                <h1>Capsule Vision 2024 Challenge: Multi-Class Abnormality Classification for Video Capsule Endoscopy</h1>
+            </div>
+            <div class="banner">
+            </div>
+            <h1 id="overview">Important Updates</h1>
+            <p>
+                <ul>
+                <li> The results of the challenge have been officially announced. Kindly check email, updated arXiv and Github. Heartiest Congratulations to team <span>PuppyOps</span> for rank 1, <span>MedInfoLab IIT Hyderabad</span> for rank 2, <span>WueVision</span> for rank 3, <span>Llama_Mamba</span> for rank 4 and <span>Seq2Cure</span> for rank 5. Challenge summary paper will be released in due time. Congratulations to all the teams for their remarkable efforts!</li>
+                <li> Test class labels (ground truths) have been released.</li>
+                <li> Result submissions for Capsule Vision 2024 Challenge are now <span>CLOSED</span>.</li>
+                <li> The registration for Capsule Vision 2024 Challenge was officially <span>CLOSED</span>.</li>
+                <li> Participants must ensure that their final results are validated using the <span>Sanity Checker</span> prior to submission for consideration. Check <span>KEY LINKS</span>.</li>
+                <li> Testing dataset was released. Check <span>KEY LINKS</span>.</li>
+                <li> The submission period for results was set from <span>October 11, 2024 - October 25, 2024</span>. All participants are requested to follow the submission instructions and rules strictly.</li>
+                <li> The final deadline for all submissions was <span>October 25, 2024</span> i.e. no extensions will be granted.</li>
+                <li> The challenge website and GitHub repository had been updated accordingly. The arXiv will be updated on <span>November 25, 2024</span> upon the official announcement of the results.</li>
+                <li> Upon completion of the challenge, the benchmarking pipeline and its performance results based on the validation and testing datasets will be released.</li>
+                <li> Participants are not required to compare their results with the benchmarking pipeline as this will be carried out by the organizing team.</li>
+                <li> <span>Balanced accuracy</span> will also be considered as a goal metric along with mean AUC. Please check the updated codes on 
+                <a href="https://github.com/misahub2023/Capsule-Vision-2024-Challenge">Github</a>.</li>
+                <li> Training dataset was released. Check <span>KEY LINKS</span>.</li>
+                <li> <s>Registrations are now <span>OPEN</span>. <span>HURRY, APPLY!</span></s></li>
+                <!-- <li> We sincerely acknowledge and thank 9<sup>th</sup> International Conference on Computer Vision & Image Processing for the amazing opportunity. Heartfelt gratitude for their support and guidance in conducting this challenge!</li> -->
+                </ul>
+            </p>
+            <h1 id="overview">Goal</h1>
+            <p>The aim of the challenge was to provide an opportunity for the development, testing and evaluation of AI models for automatic classification of abnormalities captured in video capsule endoscopy (VCE) video frames. It promotes the development of vendor-independent and generalized AI-based models for automatic abnormality classification pipeline with 10 class labels:
+                <ol>
+                    <li>Angioectasia</li>
+                    <li>Bleeding</li>
+                    <li>Erosion</li>
+                    <li>Erythema</li>
+                    <li>Foreign body</li>
+                    <li>Lymphangiectasia</li>
+                    <li>Polyp</li>
+                    <li>Ulcer</li>
+                    <li>Worms</li>
+                    <li>Normal</li>
+                </ol>
+            </p>
+            
+            <h1 id="challenge">Data</h1>
+            <h3 id="training">Training and Validation Data</h3>
+            <p>The training and validation datasets were released and are accessible 
+            <a href="https://figshare.com/articles/dataset/Training_and_Validation_Dataset_of_Capsule_Vision_2024_Challenge/26403469"> here</a>. </p>
+            <h3 id="training">Testing Data</h3>
+            <p>The testing dataset had been released and was accessible
+            <a href="https://figshare.com/articles/dataset/Testing_Dataset_of_Capsule_Vision_2024_Challenge/27200664?file=49717386"> here</a>.</p>
+    
+            <h1 id="dates">Evaluation</h1>
+            <p>
+                <h3 id="goal_metric">Goal Metric</h3>
+                <ul>
+                    <li>Balanced Accuracy</li>
+                    <li>Mean AUC</li>
+                </ul>
+                <h3 id="other_metric">Other Metrics</h3>
+                <ul>
+                    <li>AUC-ROC</li>
+                    <li>Specificity</li>
+                    <li>Mean Specificity</li>
+                    <li>F1 Score</li>
+                    <li>Mean F1 Score</li>
+                    <li>Average Precision</li>
+                    <li>Mean Average Precision</li>
+                </ul>
+            </p>
+            
+            <h1 id="registration">Submission Instructions and Rules</h1>
+            <p>
+                <ul>
+                    <li> The detailed submission instructions and challenge rules are available on <a href="https://arxiv.org/abs/2408.04940">ArXiv</a>.</li>
+                    <li> The sample codes are available on <a href="https://github.com/misahub2023/Capsule-Vision-2024-Challenge">GitHub</a> for your reference.</li>
+                    <li> The sample submission report was available on <a href="https://www.overleaf.com/read/kwhvpznnbzwb#26d62a">Overleaf</a>.</li>
+                    </ul>
+            </p>
+            
+            <h1 id="prizes">Prizes</h1>
+            <p>
+                <ul>
+                    <li> Cash prize sponsored by the 9<sup>th</sup> International Conference on Computer Vision & Image Processing (CVIP 2024).
+                        <ul>
+                            <li>1<sup>st</sup> Prize: <span>200 €</span></li>
+                            <li>2<sup>nd</sup> Prize: <span>150 €</span></li>
+                            <li>3<sup>rd</sup> Prize: <span>100 €</span></li>
+                        </ul>
+                    </li>
+                    <li> E-certificate to top three winning teams.</li>
+                    <li> Co-authorship in the challenge summary paper for top 4 teams.</li>
+                    <li> Opportunity to showcase work at CVIP 2024.</li>
+                    </ul>
+            </p>
+            
+            <h1 id="organisers">Meet The Team</h1>
+            <h3 id="training">ORGANISERS</h3>
+            <div class="team-container">
+                <div class="team-member">
+                    <img src="cv2024-assets/palakMam.jpg" alt="Team Member 1 Photo" class="team-photo">
+                    <h2 class="team-name">Dr. Palak Handa</h2>
+                    <p class="team-institution">Research Centre for MIAAI, DPU, Austria</p>
+                </div>
+                <div class="team-member">
+                    <img src="cv2024-assets/Amirreza.webp" alt="Team Member 2 Photo" class="team-photo">
+                    <h2 class="team-name">Dr. Amirreza Mahbod</h2>
+                    <p class="team-institution">Research Centre for MIAAI, DPU, Austria</p>
+                </div>
+                <div class="team-member">
+                    <img src="cv2024-assets/florian.webp" alt="Team Member 7 Photo" class="team-photo">
+                    <h2 class="team-name">Dr. Florian Schwarzhans</h2>
+                    <p class="team-institution">Research Centre for MIAAI, DPU, Austria</p>
+                </div>
+                <div class="team-member">
+                    <img src="cv2024-assets/ramona.jpeg" alt="Team Member 3 Photo" class="team-photo">
+                    <h2 class="team-name">Dr. Ramona Woitek </h2>
+                    <p class="team-institution">Research Centre for MIAAI, DPU, Austria</p>
+                </div>
+                <div class="team-member">
+                    <img src="cv2024-assets/nidhiMam.png" alt="Team Member 4 Photo" class="team-photo">
+                    <h2 class="team-name">Dr. Nidhi Goel</h2>
+                    <p class="team-institution">Dept. of ECE, IGDTUW, Delhi, India</p>
+                </div>
+                <div class="team-member">
+                    <img src="cv2024-assets/deepakSir.png" alt="Team Member 5 Photo" class="team-photo">
+                    <h2 class="team-name">Dr. Deepak Gunjan </h2>
+                    <p class="team-institution">Dept. of Gastroenterology and HNU, AIIMS Delhi, India</p>
+                </div>
+                <div class="team-member">
+                    <img src="cv2024-assets/jagadeesh.jpeg" alt="Team Member 8 Photo" class="team-photo">
+                    <h2 class="team-name">Dr. Jagadeesh Kakarla</h2>
+                    <p class="team-institution">Dept. of CSE, IIITDM Kancheepuram, India</p>
+                </div>
+                <div class="team-member">
+                    <img src="cv2024-assets/balaSir.png" alt="Team Member 6 Photo" class="team-photo">
+                    <h2 class="team-name">Dr. Balasubramanian Raman </h2>
+                    <p class="team-institution">Dept. of CSE, IIT Roorkee, India</p>
+                </div>
+            </div>
+            <br><br>
+
+            <h3 id="training">MISAHUB MEMBERS</h3>
+            <div class="team-container">
+                <div class="team-member">
+                    <img src="cv2024-assets/deepti.png" alt="Team Member 1 Photo" class="team-photo">
+                    <h2 class="team-name">Deepti Chhabra</h2>
+                    <p class="team-institution">
+                        Dept. of AI & DS <br>
+                        IGDTUW, Delhi, India
+                    </p>
+                </div>
+                <div class="team-member">
+                    <img src="cv2024-assets/shreshtha.jpeg" alt="Team Member 2 Photo" class="team-photo">
+                    <h2 class="team-name">Shreshtha Jha</h2>
+                    <p class="team-institution">
+                        Dept. of ECE <br>
+                        IGDTUW, Delhi, India 
+                    </p>
+                </div>
+                <div class="team-member">
+                    <img src="cv2024-assets/manas.png" alt="Team Member 3 Photo" class="team-photo">
+                    <h2 class="team-name">Manas Dhir</h2>
+                    <p class="team-institution">
+                        Dept. of AI-ML <br>
+                        USAR, GGSIPU, Delhi, India 
+                    </p>
+                </div>
+                <div class="team-member">
+                    <img src="cv2024-assets/pallavi.jpeg" alt="Team Member 9 Photo" class="team-photo">
+                    <h2 class="team-name">Pallavi Sharma</h2>
+                    <p class="team-institution">Dept. of ECE <br>
+                    IGDTUW, Delhi, India</p>
+                </div>
+                <div class="team-member">
+                    <img src="cv2024-assets/vijay.jpeg" alt="Team Member 10 Photo" class="team-photo">
+                    <h2 class="team-name">Vijay Thakur</h2>
+                    <p class="team-institution">Dept. of ECE <br>
+                    DTU, Delhi, India</p>
+                </div>
+            </div>
+            <br><br>
+            
+            <h1 id="support">Supported By</h1>
+            <div class="team-container2">
+                <div class="spons">
+                    <img src="cv2024-assets/dpu.png" height=130px width=120px>
+                </div>
+                <div class="spons">
+                    <img src="cv2024-assets/miaai.png" height=140px width=200px>
+                </div>
+                <div class="spons">
+                    <img src="cv2024-assets/misahub.png" height=170px width=160px >
+                </div>
+                <div class="spons">
+                    <img src="cv2024-assets/cvip24.png" height=130px width=190px>
+                </div>
+                <div class="spons">
+                    <img src="cv2024-assets/dst.png" height=130px width=200px>
+                </div>
+            </div>
+            <br><br>
+            
+
+            
+            <h1 id="contact">Contact</h1>
+            <p> For any query, please contact <a href="mailto:ask.misahub@gmail.com">ask.misahub@gmail.com</a>.</p>
+            
+            
+        </div>
+    </main>
+
+    <footer style="background-color: black" ;>
+
+        &copy;
+        2022 - Present. All Rights Reserved
+    </footer>
+
+    <script>
+        // JavaScript to toggle the menu
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const navLinks = document.getElementById('nav-links');
+            navLinks.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
